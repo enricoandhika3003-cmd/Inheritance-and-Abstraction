@@ -35,7 +35,7 @@ s.printname()
 from abc import ABC, abstractmethod
 class Animals(ABC):
     @abstractmethod
-    def abs_method(self):
+    def move(self):
         pass
 
 class Human(Animals):
