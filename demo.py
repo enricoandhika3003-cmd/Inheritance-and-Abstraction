@@ -57,7 +57,6 @@ class Dog(Animals):
 h = Human()
 h.move()
 
-import math
 class Shapes:
     def __init__(self, name, sides):
         self.name = name
@@ -89,21 +88,7 @@ class Rectangle(Shapes):
             print(f"The area of a {self.name} with length {self.length} units and width {self.width} units is: {(self.length)*(self.width)} units^2")
         else:
             print(f"Invalid number of sides for the {self.name}")
-
-class Circle(Shapes):
-    def __init__(self, name, sides, radius):
-        self.radius = radius
-        Shapes.__init__(self, name, sides)
-    
-    def calculate(self):
-        if float(self.radius)<0:
-            print(f"Invalid radius for the {self.name}")
-        elif int(self.sides)==0:
-            print(f"The area of a {self.name} with radius {self.radius} units and diameter {(self.radius)*2} units is: {((self.radius)**2)*math.pi} units^2")
-        else:
-            print(f"Invalid number of sides for the {self.name}")
             
-
 sq = Square("Square", 4, -17)
 sq.calculate()
 
@@ -121,12 +106,3 @@ r2.calculate()
 
 r3 = Rectangle("Rectangle", 4, 5.5, 6)
 r3.calculate()
-
-c = Circle("Circle", 0, -10)
-c.calculate()
-
-c2 = Circle("Circle", 1, 3)
-c2.calculate()
-
-c3 = Circle("Circle", 0, 5)
-c3.calculate()
